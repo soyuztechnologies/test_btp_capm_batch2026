@@ -1,5 +1,5 @@
 # Getting Started
-fix a bug
+www.anubhavtrainings.com
 Welcome to your new project.
 
 It contains these folders and files, following our recommended project layout:
