@@ -20,10 +20,10 @@ service CatalogService @(path: 'CatalogService', requires: 'authenticated-user')
 
     entity PurchaseOrderSet 
     @(
-                            //   restrict :[
-                            //     {grant : ['READ'], to: 'Viewer'},
-                            //     {grant : ['WRITE', 'DELETE'], to: 'Editor'}
-                            //   ],
+                              restrict :[
+                                {grant : ['READ'], to: 'Viewer'},
+                                {grant : ['WRITE', 'DELETE'], to: 'Editor'}
+                              ],
                               odata.draft.enabled: true,
                               Common.DefaultValuesFunction: 'getDeafultValue' ) as projection on transaction.purchaseorder{
         *,
