@@ -1,5 +1,6 @@
 {
  "xsappname": "mycapapp",
+ "tenant-mode": "dedicated",
  "scopes": [
   {
    "name": "$XSAPPNAME.Display",
@@ -12,14 +13,6 @@
   {
    "name": "$XSAPPNAME.Delete",
    "description": "delete"
-  },
-  {
-   "name": "$XSAPPNAME.Viewer",
-   "description": "Viewer"
-  },
-  {
-   "name": "$XSAPPNAME.Editor",
-   "description": "Editor"
   }
  ],
  "attributes": [
@@ -58,7 +51,7 @@
  "oauth2-configuration": {
   "token-validity": 9000,
   "redirect-uris": [
-   "https://*.cfapps.us10-001.hana.ondemand.com"
+   "https://*.cfapps.us10-001.hana.ondemand.com/login/callback"
   ]
  },
  "xsenableasyncservice": "true"

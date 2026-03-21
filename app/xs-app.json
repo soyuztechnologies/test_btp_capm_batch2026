@@ -2,7 +2,6 @@
   "welcomeFile": "managepo/webapp/index.html",
   "authenticationMethod": "route",
   "sessionTimeout": 10,
-  "pluginMetadataEndpoint": "/odata/v4/CatalogService/$metadata",
   "routes": [				
     {
         "source": "^/managepo/webapp/(.*)",
