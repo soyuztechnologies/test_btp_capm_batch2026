@@ -1,5 +1,5 @@
 # Getting Started
-
+fix a bug
 Welcome to your new project.
 
 It contains these folders and files, following our recommended project layout:
