@@ -53,11 +53,6 @@
         "[production]": {
           "kind": "xsuaa"
         }
-      },
-      "[production]": {
-        "auth": {
-          "kind": "xsuaa"
-        }
       }
     }
   }
