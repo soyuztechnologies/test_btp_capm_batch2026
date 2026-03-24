@@ -27,6 +27,15 @@
   ],
   "cds": {
     "requires": {
+      "db": {
+        "[development]" :{
+          "kind": "sqlite",
+          "credentials": {"url": "db.sqlite"}
+        },
+        "[production]" : {
+          "kind": "hana"
+        }
+      },
       "auth": {
         "[development]": {
           "kind": "mocked",
