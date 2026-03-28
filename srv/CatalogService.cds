@@ -8,7 +8,7 @@ service CatalogService @(path: 'CatalogService', requires: 'authenticated-user')
                                 {grant : ['READ'], to: 'Display',
                                     //row level security
                                     where :'bankName = $user.spiderman'},
-                                {grant : ['WRITE', 'DELETE'], to: 'Editor'}
+                                {grant : ['WRITE', 'DELETE'], to: 'Edit'}
                               ]) 
                               as projection on master.employee;
     entity ProductSet as projection on master.product;
@@ -22,7 +22,7 @@ service CatalogService @(path: 'CatalogService', requires: 'authenticated-user')
     @(
                               restrict :[
                                 {grant : ['READ'], to: 'Display'},
-                                {grant : ['WRITE', 'DELETE'], to: 'Editor'}
+                                {grant : ['WRITE', 'DELETE'], to: 'Edit'}
                               ],
                               odata.draft.enabled: true,
                               Common.DefaultValuesFunction: 'getDeafultValue' ) as projection on transaction.purchaseorder{
