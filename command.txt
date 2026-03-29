@@ -10,7 +10,7 @@ mbt build
 cf deploy mta_archives/mycapapp_1.0.0.mtar
 
 Step 3: if you make code changes and want to push to git
-git add . && git commit -m "anubhav is a crazy guy" && git push
+git add . && git commit -m "attachment feature" && git push
 
 Step 4: if you dont want to BUILD and DEPLOY project with MTAR, directly deploy w/o mtar
 cds up

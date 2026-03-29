@@ -17,7 +17,6 @@ service CatalogService @(path: 'CatalogService', requires: 'authenticated-user')
     @readonly
     entity StatusCode as projection on master.StatusCode;
     //@Capabilities : { Deletable : false }
-
     entity PurchaseOrderSet 
     @(
                               restrict :[
