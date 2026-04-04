@@ -67,7 +67,7 @@ http://localhost:4004/odata/v4/CDSService/ProductSet/74867AD200E41EDBA5D8B06B26E
 
 ###Create opeation to insert data into database
 POST http://localhost:4004/odata/v4/CatalogService/EmployeeSet
-Authorization: Basic ananya:ananya
+Authorization: Basic anubhav:Welcome1
 Content-Type: application/json
 
 {
@@ -88,11 +88,12 @@ Content-Type: application/json
 }
 
 ###Change Data - update - copy the id created in last call
-PATCH http://localhost:4004/odata/v4/CatalogService/EmployeeSet/a65bf4ca-2fb7-43fe-ad7b-d55663052dbd
+PATCH http://localhost:4004/odata/v4/CatalogService/EmployeeSet/02BD2137-0890-1EEA-A6C2-BB55C198A7FB
+Authorization: Basic anubhav:Welcome1
 Content-Type: application/json
 
 {
-    "salaryAmount": 1999999
+    "salaryAmount": 1900
 }
 
 
