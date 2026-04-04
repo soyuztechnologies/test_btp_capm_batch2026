@@ -13,6 +13,13 @@
   {
    "name": "$XSAPPNAME.Delete",
    "description": "delete"
+  },
+  {
+   "name": "$XSAPPNAME.mtcallback",
+   "description": "Subscription via SaaS Registry",
+   "grant-as-authority-to-apps": [
+    "$XSAPPNAME(application,sap-provisioning,tenant-onboarding)"
+   ]
   }
  ],
  "attributes": [
@@ -54,5 +61,6 @@
    "https://*.cfapps.us10-001.hana.ondemand.com/login/callback"
   ]
  },
- "xsenableasyncservice": "true"
+ "xsenableasyncservice": "true",
+ "authorities-inheritance": false
 }
