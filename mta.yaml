@@ -36,7 +36,6 @@ modules:
         properties:
           name: mtx-api # must be used in xs-app.json as well
           url: ~{mtx-url}
-      - name: mycapapp-auth
     provides:
       - name: app-api
         properties:
