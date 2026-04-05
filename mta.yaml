@@ -1,5 +1,5 @@
 _schema-version: 3.3.0
-ID: mycapapp
+ID: mycapappana
 version: 1.0.0
 description: Anubhav Trainings Lifes first CAP app
 parameters:
@@ -12,7 +12,7 @@ build-parameters:
         - npx cds build --production
 modules:
 ##this is our UI module added = fioriui+approuter
-  - name: mycapapp-ui
+  - name: mycapappana-ui
     type: nodejs
     path: app
     parameters:
@@ -21,7 +21,7 @@ modules:
     build-parameters:
       builder: npm-ci
     requires:
-      - name: mycapapp-auth
+      - name: mycapappana-auth
       - name: srv-api
         group: destinations
         properties:
@@ -31,7 +31,7 @@ modules:
           url: '~{srv-url}'
 
 ##end of code
-  - name: mycapapp-srv
+  - name: mycapappana-srv
     type: nodejs
     path: gen/srv
     parameters:
@@ -44,43 +44,43 @@ modules:
         properties:
           srv-url: '${default-url}'
     requires:
-      - name: mycapapp-auth
-      - name: mycapapp-db
-  - name: mycapapp-db-deployer
+      - name: mycapappana-auth
+      - name: mycapappana-db
+  - name: mycapappana-db-deployer
     type: hdb
     path: gen/db
     parameters:
       buildpack: nodejs_buildpack
     requires:
-      - name: mycapapp-db
+      - name: mycapappana-db
 resources:
-  - name: mycapapp-auth
+  - name: mycapappana-auth
     type: org.cloudfoundry.managed-service
     parameters:
       service: xsuaa
       service-plan: application
       path: ./xs-security.json
       config:
-        xsappname: 'mycapapp-${org}-${space}'
+        xsappname: 'mycapappana-${org}-${space}'
         tenant-mode: dedicated
         oauth2-configuration:
           credential-types:
             - binding-secret
             - x509
         role-collections:
-          - name: 'Viewer (mycapapp ${org}-${space})'
+          - name: 'Viewer (mycapappana ${org}-${space})'
             description: generated
             role-template-references:
               - $XSAPPNAME.Viewer
-          - name: 'Editor (mycapapp ${org}-${space})'
+          - name: 'Editor (mycapappana ${org}-${space})'
             description: generated
             role-template-references:
               - $XSAPPNAME.Editor
-          - name: 'userattributes (mycapapp ${org}-${space})'
+          - name: 'userattributes (mycapappana ${org}-${space})'
             description: generated
             role-template-references:
               - $XSAPPNAME.userattributes
-  - name: mycapapp-db
+  - name: mycapappana-db
     type: com.sap.xs.hdi-container
     parameters:
       service: hana
